@@ -1,0 +1,12 @@
+# 模型的导入：将已经训练好的经典模型加载到项目中
+
+## tensorflow提供了两种方法存储和加载模型
+    - 方法1：生成检查点文件(checkpoint file)
+        - 扩展名一般为.ckpt
+        - 通过tf.train.Saver对象上调用Saver.save()生成
+        - 通过saver.restore()来加载
+    - 方法2：生成图协议文件(graph proto file)
+        - 是一个二进制文件
+        - 扩展名一般为.bp
+        - 用tf.train.write_graph()来保存
+        - 用tf.import_graph_def()来加载图
